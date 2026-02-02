@@ -41,7 +41,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50  transition-all duration-300 ${
+      className={`px-2 fixed top-0 w-full z-50  transition-all duration-300 ${
         scrolled
           ? "bg-primary shadow-lg border-b border-(--nav-border-color)"
           : "bg-primary/80 backdrop-blur-sm"
@@ -84,12 +84,15 @@ export default function Navbar() {
               />
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="p-2 text-primary hover:text-accent transition-all duration-300 active:scale-95"
+                className="p-1 text-primary bg-primary/5 
+                hover:bg-accent/15 hover:text-accent
+                border border-(--border-color) rounded-md
+                    hover:text-accent transition-all duration-300 active:scale-95"
                 aria-label="Toggle menu"
               >
                 <FontAwesomeIcon
                   icon={isOpen ? faXmark : faBars}
-                  className="w-10 h-10"
+                  className={`w-4 h-4 transition-all duration-300 ${isOpen ? "rotate-90" : "rotate-0"}`}
                   size="lg"
                 />
               </button>
@@ -100,9 +103,19 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="w-[98%] mx-auto mt-4 md:hidden rounded-lg bg-(--bg-primary) 
-            backdrop-blur-lg shadow-sm border 
-            border-(--nav-border-color) overflow-hidden animate-in slide-in-from-top duration-300"
+        <div
+          className={`
+            w-full mx-auto mt-4 md:hidden rounded-lg
+            bg-(--bg-primary) backdrop-blur-lg
+            shadow-sm border border-(--nav-border-color)
+            overflow-hidden
+            transform transition-all duration-300 ease-out
+            ${
+            isOpen
+            ? "opacity-100 translate-y-0 scale-100"
+            : "opacity-0 -translate-y-3 scale-95 pointer-events-none"
+            }
+        `}
         >
           {navItems.map((item) => (
             <a
