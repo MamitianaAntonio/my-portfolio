@@ -15,7 +15,6 @@
     "@fortawesome/react-fontawesome": "^3.1.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-toggle-dark-mode": "^1.1.1",
     "use-local-storage": "^3.0.0"
   },
   "devDependencies": {
