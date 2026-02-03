@@ -12,6 +12,7 @@ export default function Navbar() {
   const navItems = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
+    { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
   ];
@@ -42,9 +43,7 @@ export default function Navbar() {
   return (
     <nav
       className={`px-2 fixed top-0 w-full z-50  transition-all duration-300 ${
-        scrolled
-          ? ""
-          : "bg-primary/80 backdrop-blur-sm"
+        scrolled ? "" : "bg-primary/80 backdrop-blur-sm"
       }`}
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 border m-2 rounded-lg border-(--nav-border-color)">
@@ -111,9 +110,9 @@ export default function Navbar() {
             overflow-hidden
             transform transition-all duration-300 ease-out
             ${
-            isOpen
-            ? "opacity-100 translate-y-0 scale-100"
-            : "opacity-0 -translate-y-3 scale-95 pointer-events-none"
+              isOpen
+                ? "opacity-100 translate-y-0 scale-100"
+                : "opacity-0 -translate-y-3 scale-95 pointer-events-none"
             }
         `}
         >
