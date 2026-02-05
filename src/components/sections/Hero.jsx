@@ -1,84 +1,87 @@
-export default function Hero() {
-  return (
-    <section
-      style={{
-        backgroundColor: 'var(--bg-primary)',
-        minHeight: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: '60px 20px',
-        overflow: 'hidden',
-      }}
-    >
-      <div
-        style={{
-          maxWidth: '1000px',
-          width: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: '40px',
-        }}
-      >
-        {/* Photo with glow */}
-        <div
-          style={{
-            position: 'relative',
-            display: 'flex',
-            justifyContent: 'center',
-          }}
-        >
-          {/* Glow behind */}
-          <div
-            style={{
-              position: 'absolute',
-              width: '280px',
-              height: '280px',
-              background: 'var(--accent-color)',
-              filter: 'blur(90px)',
-              opacity: '0.35',
-              zIndex: 0,
-              borderRadius: '50%',
-            }}
-          />
+import React, { useEffect, useState } from "react";
+import "./Hero.css";
 
+export default function Hero() {
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const roles = ["Full-Stack Web Developer", "Modern Interfaces", "Clean Code"];
+
+  const [text, setText] = useState(roles[0]);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+
+  useEffect(() => {
+    const prefersReduced =
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (prefersReduced) {
+      setText(roles[0]);
+      return;
+    }
+
+    const i = loopNum % roles.length;
+    const fullText = roles[i];
+
+    const timeout = setTimeout(
+      () => {
+        setText((prev) =>
+          isDeleting
+            ? fullText.substring(0, prev.length - 1)
+            : fullText.substring(0, prev.length + 1),
+        );
+
+        if (!isDeleting && text === fullText) {
+          setTimeout(() => setIsDeleting(true), 700);
+        } else if (isDeleting && text === "") {
+          setIsDeleting(false);
+          setLoopNum((n) => n + 1);
+        }
+      },
+      isDeleting ? 50 : 120,
+    );
+
+    return () => clearTimeout(timeout);
+  }, [text, isDeleting, loopNum, roles]);
+
+  return (
+    <section id="home" aria-labelledby="hero-name" className="hero">
+      <div className="hero-inner">
+        {/* Photo */}
+        <div className="hero-photo-wrapper">
+          <div className="hero-glow" />
           <img
             src="/images/me.jpg"
-            alt="Profile picture"
-            style={{
-              width: '240px',
-              height: '240px',
-              objectFit: 'cover',
-              borderRadius: '50%',
-              zIndex: 1,
-            }}
+            alt="Portrait of RATOLOJANAHARY Mamitiana Antonio"
+            loading="lazy"
+            className="hero-photo"
           />
         </div>
-        {/* Name */}
-        <h1
-          style={{
-            color: 'var(--text-primary)',
-            fontSize: 'clamp(30px, 4vw, 60px)',
-            fontWeight: '700',
-            textAlign: 'center',
-          }}
-        >
-          RATOLOJANAHARY Mamitiana Antonio
-        </h1>
 
-        {/* Optional short role */}
-        <p
-          style={{
-            color: 'var(--text-secondary)',
-            fontSize: '20px',
-            textAlign: 'center',
-            marginBottom: '32px',
-          }}
-        >
-          Web Developer · Modern Interfaces · Clean Code
-        </p>
+        {/* Content */}
+        <div className="hero-content">
+          <h1 id="hero-name" className="hero-name">
+            RATOLOJANAHARY Mamitiana Antonio
+          </h1>
 
+          <p className="hero-role">
+            <span>{text}</span>
+            <span className="caret" aria-hidden />
+          </p>
+
+          <p className="hero-description">
+            I build modern, accessible web applications with a strong focus on
+            clean interfaces, performance, and developer experience.
+          </p>
+
+          <div className="hero-actions">
+            <a href="#projects" className="btn btn-primary">
+              View Projects
+            </a>
+            <a href="#contact" className="btn btn-outline">
+              Contact
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
