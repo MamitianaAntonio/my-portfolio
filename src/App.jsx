@@ -6,8 +6,6 @@ export const App = () => {
     <>
       <Navbar />
       <Hero />
-
-      <p className="text-center text-text-secondary py-8">© 2024 Antonio. Tous droits réservés.</p>
     </>
   );
 };

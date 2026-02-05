@@ -1,0 +1,140 @@
+.hero {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+  overflow: hidden;
+}
+
+.hero-inner {
+  max-width: 1100px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5rem;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero-inner {
+    grid-template-columns: auto 1fr;
+    text-align: left;
+  }
+}
+
+/* Photo */
+.hero-photo-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-glow {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: var(--accent-color);
+  filter: blur(90px);
+  opacity: 0.35;
+  border-radius: 50%;
+}
+
+.hero-photo {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+/* Content */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem; /* ESPACE ENTRE LES ÉLÉMENTS */
+}
+
+.hero-name {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+
+.hero-role {
+  font-size: 1.25rem;
+  color: var(--accent-color);
+  min-height: 1.6em;
+}
+
+.caret {
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background: currentColor;
+  margin-left: 4px;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.hero-description {
+  max-width: 520px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* Actions */
+.hero-actions {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .hero-actions {
+    justify-content: flex-start;
+  }
+}
+
+/* Buttons */
+.btn {
+  padding: 0.85rem 1.75rem;
+  border-radius: 8px; /* rectangle clean */
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--accent-color);
+  color: var(--text-white);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: color-mix(in srgb, var(--accent-color) 90%, black);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+.btn-outline:hover {
+  transform: translateY(-2px);
+  background: color-mix(in srgb, var(--accent-color) 8%, transparent);
+}
