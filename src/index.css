@@ -10,6 +10,8 @@
   --accent-color: #007bff;
   --border-color: #e0e0e0;
   --nav-border-color: rgba(0, 0, 0, 0.06);
+  --gradient-from: #60a5fa;
+  --gradient-to: #7c3aed;
 }
 
 [data-theme="dark"] {
@@ -21,6 +23,8 @@
   --accent-color: #4a9eff;
   --border-color: #404040;
   --nav-border-color: rgba(255, 255, 255, 0.06);
+  --gradient-from: #2563eb;
+  --gradient-to: #6b21a8;
 }
 
 body {
