@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Hero.css";
+import Button from "../ui/Button";
 
 export default function Hero() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -74,12 +75,12 @@ export default function Hero() {
           </p>
 
           <div className="hero-actions">
-            <a href="#projects" className="btn btn-primary">
+            <Button href="#projects" variant="primary">
               View Projects
-            </a>
-            <a href="#contact" className="btn btn-outline">
+            </Button>
+            <Button href="#contact" variant="outline">
               Contact
-            </a>
+            </Button>
           </div>
         </div>
       </div>
