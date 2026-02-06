@@ -6,6 +6,7 @@
   padding: 1rem 1.5rem;
   overflow: hidden;
   min-height: 60vh;
+  padding-top: 6rem;
 }
 
 .hero-inner {
@@ -55,7 +56,7 @@
 .hero-content {
   display: flex;
   flex-direction: column;
-  gap: 1.75rem; /* ESPACE ENTRE LES ÉLÉMENTS */
+  gap: 1.75rem;
 }
 
 .hero-name {
@@ -66,8 +67,11 @@
 }
 
 .hero-role {
-  font-size: 1.25rem;
-  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 550;
+  color: linear-gradient(to right, var(--gradient-from), var(--gradient-to));
   min-height: 1.6em;
 }
 
@@ -109,23 +113,35 @@
 /* Buttons */
 .btn {
   padding: 0.85rem 1.75rem;
-  border-radius: 8px; /* rectangle clean */
+  border-radius: 10px;
   font-size: 0.95rem;
   font-weight: 500;
   letter-spacing: 0.3px;
+  cursor: pointer;
   transition:
-    background 0.2s ease,
-    transform 0.15s ease;
+    background 0.3s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .btn-primary {
-  background: var(--accent-color);
+  background: linear-gradient(90deg, var(--gradient-from), var(--gradient-to));
+  background-size: 200% 200%;
   color: var(--text-white);
+
+  box-shadow: 0 6px 18px
+    color-mix(in srgb, var(--accent-color) 35%, transparent);
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  background: color-mix(in srgb, var(--accent-color) 90%, black);
+  transform: translateY(-3px);
+  background-position: right center;
+  box-shadow: 0 12px 30px
+    color-mix(in srgb, var(--accent-color) 55%, transparent);
+}
+
+.btn-primary:active {
+  transform: translateY(-1px);
 }
 
 .btn-outline {
@@ -135,6 +151,12 @@
 }
 
 .btn-outline:hover {
-  transform: translateY(-2px);
-  background: color-mix(in srgb, var(--accent-color) 8%, transparent);
+  transform: translateY(-3px);
+  background: color-mix(in srgb, var(--accent-color) 12%, transparent);
+  box-shadow: 0 8px 20px
+    color-mix(in srgb, var(--accent-color) 25%, transparent);
+}
+
+.btn-outline:active {
+  transform: translateY(-1px);
 }

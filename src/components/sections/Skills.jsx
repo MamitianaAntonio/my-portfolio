@@ -87,8 +87,8 @@ export default function Skills() {
           {skills.map((skill, index) => (
             <div
               key={skill.name}
-              className="group relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 
-                         border border-gray-700/50 hover:border-gray-600
+              className="group relative bg-var(--bg-primary) backdrop-blur-sm rounded-xl p-6
+                         border border-gray-700/50 hover:border-var(--bg-secondary)
                          transform hover:scale-110 transition-all duration-300
                          hover:shadow-2xl hover:shadow-purple-500/20
                          cursor-pointer"
@@ -98,7 +98,7 @@ export default function Skills() {
             >
               {/* Gradient overlay on hover */}
               <div
-                className="absolute inset-0 bg-linear-to-br from-blue-500/10 to-purple-600/10 
+                className="absolute inset-0 bg-linear-to-br from-blue-500/10 to-purple-600/10
                             rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               ></div>
 
@@ -112,7 +112,7 @@ export default function Skills() {
                 {/* Skill Name */}
                 <span
                   className="text-var(--text-primary) text-sm font-medium text-center
-                               group-hover:text-white transition-colors duration-300"
+                    group-hover:text-var(--text-primary) transition-colors duration-300"
                 >
                   {skill.name}
                 </span>
@@ -120,8 +120,8 @@ export default function Skills() {
 
               {/* Animated border effect */}
               <div
-                className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 
-                            transition-opacity duration-300 pointer-events-none"
+                className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100
+                  transition-opacity duration-300 pointer-events-none"
               >
                 <div
                   style={{
@@ -131,7 +131,7 @@ export default function Skills() {
                     WebkitTextFillColor: "transparent",
                   }}
                   className="absolute inset-0 rounded-xl
-                              opacity-20 blur-xl"
+                    opacity-20 blur-xl"
                 ></div>
               </div>
             </div>
