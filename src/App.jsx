@@ -1,5 +1,6 @@
 import Navbar from "./components/layout/Navbar.jsx";
 import Hero from "./components/sections/Hero.jsx";
+import Project from "./components/sections/Project.jsx";
 import Skills from "./components/sections/Skills.jsx";
 
 export const App = () => {
@@ -8,6 +9,7 @@ export const App = () => {
       <Navbar />
       <Hero />
       <Skills />
+      <Project />
     </>
   );
 };

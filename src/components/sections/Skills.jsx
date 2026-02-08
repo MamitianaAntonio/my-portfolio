@@ -77,7 +77,7 @@ export default function Skills() {
             className="w-24 h-1 bg-linear-to-r mx-auto rounded-full"
           ></div>
 
-          <p className="text-var(--text-secondary) mt-4 max-w-2xl mx-auto">
+          <p className="text-lg text-(--text-secondary) max-w-2x">
             Technologies and tools I use to bring ideas to life
           </p>
         </div>
