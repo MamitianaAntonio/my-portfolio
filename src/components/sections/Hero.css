@@ -90,12 +90,6 @@
   }
 }
 
-.hero-description {
-  max-width: 520px;
-  line-height: 1.7;
-  color: var(--text-secondary);
-}
-
 /* Actions */
 .hero-actions {
   display: flex;

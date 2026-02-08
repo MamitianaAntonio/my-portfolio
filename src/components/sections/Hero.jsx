@@ -60,16 +60,22 @@ export default function Hero() {
 
         {/* Content */}
         <div className="hero-content">
-          <h1 id="hero-name" className="hero-name">
+          <h1
+            id="hero-name"
+            className="hero-name bg-linear-to-r from-(--gradient-from) to-(--gradient-to) bg-clip-text text-transparent brightness-95"
+            style={{
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
             RATOLOJANAHARY Mamitiana Antonio
           </h1>
-
           <p className="hero-role">
             <span>{text}</span>
             <span className="caret" aria-hidden />
           </p>
 
-          <p className="hero-description">
+          <p className="hero-description text-lg text-(--text-secondary) max-w-2xl">
             I build modern, accessible web applications with a strong focus on
             clean interfaces, performance, and developer experience.
           </p>
