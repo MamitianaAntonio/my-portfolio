@@ -1,5 +1,6 @@
 // Card.jsx
 import { FiExternalLink, FiGithub } from "react-icons/fi";
+import Button from "./Button";
 
 export default function Card({
   title,
@@ -67,34 +68,28 @@ export default function Card({
         )}
 
         {/* Action Buttons */}
-        <div className="flex gap-3 mt-2">
+        <div className="flex gap-3 mt-2 items-center justify-between">
           {link && (
-            <a
-              href={link}
+            <Button 
+              href={link} 
+              variant="primary"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center 
-              gap-2 px-5 py-3 rounded-xl font-semibold text-(--text-white) 
-              bg-linear-to-r from-(--gradient-from) to-(--gradient-to) 
-              transition-all duration-300 hover:opacity-90 hover:-translate-y-0.5"
             >
               <FiExternalLink className="w-4 h-4" />
               Démo
-            </a>
+            </Button>
           )}
           {githubLink && (
-            <a
-              href={githubLink}
+            <Button 
+              href={githubLink} 
+              variant="outline"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center 
-              gap-2 px-5 py-3 rounded-xl font-semibold text-(--text-primary) 
-              bg-(--bg-secondary) border border-(--border-color) transition-all 
-              duration-300 hover:bg-(--bg-primary) hover:-translate-y-0.5"
             >
               <FiGithub className="w-4 h-4" />
               GitHub
-            </a>
+            </Button>
           )}
         </div>
       </div>
