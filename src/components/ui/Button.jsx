@@ -3,8 +3,10 @@ import './Button.css';
 export default function Button({
   children,
   href,
+  target,
   variant = "primary",
   classname = "",
+  rel
 }) {
   const baseClasses = "btn";
   const variantClasses = {
@@ -16,6 +18,8 @@ export default function Button({
   return (
     <a
       href={href}
+      target={target}
+      rel={rel}
       className={`${baseClasses} ${variantClasses[variant]} ${classname}`}
     >
       {children}
