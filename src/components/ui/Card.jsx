@@ -1,6 +1,7 @@
 // Card.jsx
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 import Button from "./Button";
+import "./Card.css";
 
 export default function Card({
   title,
@@ -56,7 +57,7 @@ export default function Card({
             {tags.map((tag, index) => (
               <span
                 key={index}
-                className="px-3.5 py-1.5 text-xs font-medium 
+                className="tags px-3.5 py-1.5 text-xs font-medium 
                 rounded-full bg-(--bg-secondary) border border-(--border-color) 
                 text-(--accent-color) backdrop-blur-sm transition-all duration-300 
                 hover:border-(--accent-color) hover:-translate-y-0.5"

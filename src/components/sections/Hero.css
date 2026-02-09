@@ -68,9 +68,10 @@
 
 .hero-role {
   display: flex;
+  font-family: 'Aktinson Hyperlegible Mono', monospace;
   align-items: center;
-  font-size: 1.5rem;
-  font-weight: 550;
+  font-size: 1.6rem;
+  font-weight: 500;
   color: linear-gradient(to right, var(--gradient-from), var(--gradient-to));
   min-height: 1.6em;
 }
