@@ -42,10 +42,9 @@ export default function Navbar() {
   return (
     <nav
       className={`px-2 fixed top-0 w-full z-50  transition-all duration-300 ${
-        scrolled ? "" : "bg-primary/80 backdrop-blur-sm"
-      }`}
-    >
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 border m-2 rounded-lg border-(--nav-border-color)">
+        scrolled ? "bg-(--bg--primary)" : ""} `}>
+      <div className={`max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 border-2 m-3 rounded-lg border-(--nav-border-color) 
+      ${scrolled ? "backdrop-blur-sm" : "bg-transparent backdrop-blur-none"}`}>
         <div className="flex justify-between items-center h-15">
           <a
             href="#home"
