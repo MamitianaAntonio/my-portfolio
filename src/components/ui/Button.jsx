@@ -3,6 +3,7 @@ import './Button.css';
 export default function Button({
   children,
   href,
+  type,
   target,
   variant = "primary",
   classname = "",
@@ -19,6 +20,7 @@ export default function Button({
     <a
       href={href}
       target={target}
+      type={type}
       rel={rel}
       className={`${baseClasses} ${variantClasses[variant]} ${classname}`}
     >
