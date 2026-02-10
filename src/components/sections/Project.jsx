@@ -21,6 +21,7 @@ export default function Project() {
       image: "/projects/taskflow.png",
       link: "",
       githubLink: "https://github.com/MamitianaAntonio/task-flow-frontend",
+      inProduction: true,
     },
     {
       title: "Simple Pokedex",
@@ -30,6 +31,7 @@ export default function Project() {
       image: "/projects/pokedex.png",
       link: "https://simple-pokedex-peach.vercel.app",
       githubLink: "https://github.com/MamitianaAntonio/simple-pokedex",
+      inProduction: false,
     },
     {
       title: "My lazyvim setup",
@@ -39,6 +41,7 @@ export default function Project() {
       image: "/projects/lazy.png",
       link: null,
       githubLink: "https://github.com/MamitianaAntonio/my-lazyvim-setup2",
+      inProduction: false,
     },
     {
       title: "My Portfolio",
@@ -47,6 +50,7 @@ export default function Project() {
       tags: ["React", "Tailwind CSS", "Vite", "Framer Motion", "EmailJS"],
       image: "/projects/portfolio.png",
       githubLink: "https://github.com/MamitianaAntonio/my-portfolio",
+      inProduction: false,
     },
   ];
 
@@ -88,6 +92,7 @@ export default function Project() {
               image={project.image}
               link={project.link}
               githubLink={project.githubLink}
+              comingSoon={project.inProduction}
             />
           ))}
         </div>

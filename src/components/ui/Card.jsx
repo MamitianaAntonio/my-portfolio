@@ -10,6 +10,7 @@ export default function Card({
   link,
   tags,
   githubLink,
+  comingSoon = false,
 }) {
   return (
     <div
@@ -41,6 +42,11 @@ export default function Card({
         to-(--gradient-to) bg-clip-text text-transparent"
         >
           {title}
+          {comingSoon && (
+            <span className="absolute p-2 m-2 top-0 right-0 bg-yellow-500 text-white text-xs px-2 py-1 rounded">
+              Coming Soon
+            </span>
+          )}
         </h3>
 
         {/* Description - Pas de coupure */}
