@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./Contact.css";
 import "../ui/Button.css";
+import SocialLinks from "./SocialLink";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -33,7 +34,7 @@ export default function Contact() {
     setError("");
 
     try {
-      const response = await emailjs.send(
+      await emailjs.send(
         "service_2w2qh0d",
         "template_bybbpss",
         {
@@ -44,7 +45,7 @@ export default function Contact() {
           to_email: "ratolojanaharyantonio.pro@gmail.com",
         },
       );
-      
+
       setSubmitted(true);
       setFormData({ name: "", email: "", subject: "", message: "" });
       setTimeout(() => setSubmitted(false), 5000);
@@ -146,6 +147,7 @@ export default function Contact() {
             {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
+      <SocialLinks />
       </div>
     </section>
   );
