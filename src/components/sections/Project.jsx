@@ -44,7 +44,7 @@ export default function Project() {
       title: "My Portfolio",
       description:
         "Personal developer portfolio showcasing my projects, skills, and design decisions, built with React and Tailwind CSS for a clean and responsive experience.",
-      tags: ["React", "Tailwind CSS", "Vite"],
+      tags: ["React", "Tailwind CSS", "Vite", "Framer Motion", "EmailJS"],
       image: "/public/projects/portfolio.png",
       githubLink: "https://github.com/MamitianaAntonio/my-portfolio",
     },
