@@ -18,7 +18,7 @@ export default function Project() {
         "TailwindCSS",
         "Typescript",
       ],
-      image: "/public/projects/taskflow.png",
+      image: "/projects/taskflow.png",
       link: "",
       githubLink: "https://github.com/MamitianaAntonio/task-flow-frontend",
     },
@@ -27,7 +27,7 @@ export default function Project() {
       description:
         "Interactive Pokédex built with React, allowing users to search Pokémon and view detailed information such as stats, types, and abilities through a clean and responsive interface.",
       tags: ["React", "Vite", "TailwindCSS", "Axios", "PokéAPI"],
-      image: "/public/projects/pokedex.png",
+      image: "/projects/pokedex.png",
       link: "https://simple-pokedex-peach.vercel.app",
       githubLink: "https://github.com/MamitianaAntonio/simple-pokedex",
     },
@@ -36,7 +36,7 @@ export default function Project() {
       description:
         "Personal LazyVim configuration with plugins and key mappings for a productive development environment.",
       tags: ["Neovim", "lazy.nvim", "Lua", "Tmux"],
-      image: "/public/projects/lazy.png",
+      image: "/projects/lazy.png",
       link: null,
       githubLink: "https://github.com/MamitianaAntonio/my-lazyvim-setup2",
     },
@@ -45,7 +45,7 @@ export default function Project() {
       description:
         "Personal developer portfolio showcasing my projects, skills, and design decisions, built with React and Tailwind CSS for a clean and responsive experience.",
       tags: ["React", "Tailwind CSS", "Vite", "Framer Motion", "EmailJS"],
-      image: "/public/projects/portfolio.png",
+      image: "/projects/portfolio.png",
       githubLink: "https://github.com/MamitianaAntonio/my-portfolio",
     },
   ];
