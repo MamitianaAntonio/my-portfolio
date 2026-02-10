@@ -22,7 +22,7 @@
 
 .social-text {
   font-size: 0.95rem;
-  color: var(--text-muted);
+  color: var(--text-primary);
   font-weight: 500;
   letter-spacing: 0.5px;
   margin: 0;
@@ -43,7 +43,7 @@
   gap: 0.5rem;
   padding: 1rem;
   border-radius: 12px;
-  background: var(--card-bg);
+  background: var(--bg-primary);
   transition: all 0.3s ease;
   text-decoration: none;
   min-width: 80px;
@@ -55,7 +55,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, var(--social-color), var(--social-hover));
+  background: linear-gradient(135deg, var(--gradient-from), var(--gradient-to));
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 0;
@@ -78,8 +78,8 @@
 }
 
 .social-link:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px
     color-mix(in srgb, var(--social-color) 40%, transparent);
 }
 
@@ -88,12 +88,11 @@
 }
 
 .social-link:hover .social-icon {
-  color: var(--social-hover);
   transform: scale(1.15);
 }
 
 .social-link:hover .social-name {
-  color: var(--text-white);
+  color: var(--text-primary);
 }
 
 .social-link:active {

@@ -99,9 +99,25 @@
   justify-content: center;
 }
 
-@media (min-width: 768px) {
-  .hero-actions {
-    justify-content: flex-start;
+@media (max-width: 768px) {
+  .hero-role {
+    text-align: center;
+    margin: auto;
   }
 }
 
+@media (max-width: 480px) {
+  .hero-content {
+    text-align: center;
+  }
+  
+  .hero-role {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  
+  .hero-name {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}

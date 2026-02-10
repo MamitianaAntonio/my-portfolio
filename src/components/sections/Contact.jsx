@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./Contact.css";
 import "../ui/Button.css";
-import SocialLinks from "./SocialLink";
+import SocialLinks from "../layout/SocialLink";
 
 export default function Contact() {
   const [formData, setFormData] = useState({

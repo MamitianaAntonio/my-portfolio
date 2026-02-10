@@ -45,7 +45,7 @@ export default function Hero() {
   }, [text, isDeleting, loopNum, roles]);
 
   return (
-    <section id="home" aria-labelledby="hero-name" className="hero">
+    <section id="about" aria-labelledby="hero-name" className="hero">
       <div className="hero-inner">
         {/* Photo */}
         <div className="hero-photo-wrapper">
