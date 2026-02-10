@@ -4,7 +4,8 @@ import Project from "./components/sections/Project.jsx";
 import Skills from "./components/sections/Skills.jsx";
 import Contact from "./components/sections/Contact.jsx";
 // eslint-disable-next-line no-unused-vars
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
+import SmokeyCursor from "./components/lightswind/smokey-cursor.js";
 
 
 export const App = () => {
@@ -15,6 +16,7 @@ export const App = () => {
 
   return (
     <>
+      <SmokeyCursor />
       <Navbar />
       <motion.div
         initial="hidden"
