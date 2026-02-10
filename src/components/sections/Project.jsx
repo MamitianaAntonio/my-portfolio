@@ -5,37 +5,56 @@ export default function Project() {
     {
       title: "TaskFlow",
       description:
-        "Une plateforme e-commerce complète avec panier, paiement et gestion des commandes. Développée avec React et Node.js pour une expérience utilisateur optimale.",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
-      image:
-        "https://images.unsplash.com/photo-1661956602116-aa6865609028?w=800&q=80",
-      link: "https://demo.example.com",
-      githubLink: "https://github.com/username/project",
+        "Task management platform designed to organize projects, track tasks, and improve productivity with a smooth and intuitive user experience.",
+      tags: [
+        "React",
+        "Node.js",
+        "Prisma",
+        "Express",
+        "PostgresQL",
+        "Express",
+        "JWT",
+        "Vite",
+        "TailwindCSS",
+        "Typescript",
+      ],
+      image: "/public/projects/taskflow.png",
+      link: "",
+      githubLink: "https://github.com/MamitianaAntonio/task-flow-frontend",
     },
     {
-      title: "Dashboard Analytics",
+      title: "Simple Pokedex",
       description:
-        "Tableau de bord analytique avec visualisations interactives et rapports en temps réel pour le suivi des KPIs d'entreprise.",
-      tags: ["React", "D3.js", "TypeScript", "Firebase"],
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-      link: "https://demo.example.com",
-      githubLink: "https://github.com/username/project",
+        "Interactive Pokédex built with React, allowing users to search Pokémon and view detailed information such as stats, types, and abilities through a clean and responsive interface.",
+      tags: ["React", "Vite", "TailwindCSS", "Axios", "PokéAPI"],
+      image: "/public/projects/pokedex.png",
+      link: "https://simple-pokedex-peach.vercel.app",
+      githubLink: "https://github.com/MamitianaAntonio/simple-pokedex",
     },
     {
-      title: "App Mobile Fitness",
+      title: "My lazyvim setup",
       description:
-        "Application mobile de suivi fitness avec programmes d'entraînement personnalisés et tracking des calories en temps réel.",
-      tags: ["React Native", "Redux", "Firebase", "API REST"],
-      image:
-        "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80",
+        "Personal LazyVim configuration with plugins and key mappings for a productive development environment.",
+      tags: ["Neovim", "lazy.nvim", "Lua", "Tmux"],
+      image: "/public/projects/lazy.png",
       link: null,
-      githubLink: "https://github.com/username/project",
+      githubLink: "https://github.com/MamitianaAntonio/my-lazyvim-setup2",
+    },
+    {
+      title: "My Portfolio",
+      description:
+        "Personal developer portfolio showcasing my projects, skills, and design decisions, built with React and Tailwind CSS for a clean and responsive experience.",
+      tags: ["React", "Tailwind CSS", "Vite"],
+      image: "/public/projects/portfolio.png",
+      githubLink: "https://github.com/MamitianaAntonio/my-portfolio",
     },
   ];
 
   return (
-    <section id="projects" className="py-20 px-5 bg-(--bg-primary) min-h-screen transition-colors duration-300">
+    <section
+      id="projects"
+      className="py-20 px-5 bg-(--bg-primary) min-h-screen transition-colors duration-300"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
