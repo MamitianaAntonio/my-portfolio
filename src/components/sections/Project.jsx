@@ -35,7 +35,7 @@ export default function Project() {
   ];
 
   return (
-    <section className="py-20 px-5 bg-(--bg-primary) min-h-screen transition-colors duration-300">
+    <section id="projects" className="py-20 px-5 bg-(--bg-primary) min-h-screen transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
