@@ -7,7 +7,6 @@ import Contact from "./components/sections/Contact.jsx";
 import { motion } from "framer-motion";
 import SmokeyCursor from "./components/lightswind/smokey-cursor.js";
 
-
 export const App = () => {
   const fadeInVariants = {
     hidden: { opacity: 0, y: 30 },
