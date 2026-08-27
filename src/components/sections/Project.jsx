@@ -3,6 +3,21 @@ import Card from "../ui/Card";
 export default function Project() {
   const projectsData = [
     {
+      title: "Klioba",
+      description: "Developed the frontend interface and transaction history feature.",
+      tags: [
+        "Spring boot",
+        "java",
+        "Thymeleaf",
+        "Orange money",
+        "Casdoor"
+      ],
+      image: "/projects/klioba.png",
+      link: "https://klioba.hei.school",
+      githubLink: "https://github.com/hei-school/klioba",
+      inProduction: false
+    },
+    {
       title: "TaskFlow",
       description:
         "Task management platform designed to organize projects, track tasks, and improve productivity with a smooth and intuitive user experience.",
@@ -31,16 +46,6 @@ export default function Project() {
       image: "/projects/pokedex.png",
       link: "https://simple-pokedex-peach.vercel.app",
       githubLink: "https://github.com/MamitianaAntonio/simple-pokedex",
-      inProduction: false,
-    },
-    {
-      title: "My lazyvim setup",
-      description:
-        "Personal LazyVim configuration with plugins and key mappings for a productive development environment.",
-      tags: ["Neovim", "lazy.nvim", "Lua", "Tmux"],
-      image: "/projects/lazy.png",
-      link: null,
-      githubLink: "https://github.com/MamitianaAntonio/my-lazyvim-setup2",
       inProduction: false,
     },
     {
