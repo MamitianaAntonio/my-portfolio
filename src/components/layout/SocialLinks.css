@@ -55,7 +55,6 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, var(--gradient-from), var(--gradient-to));
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 0;
@@ -79,8 +78,6 @@
 
 .social-link:hover {
   transform: translateY(-3px);
-  box-shadow: 0 5px 10px
-    color-mix(in srgb, var(--social-color) 40%, transparent);
 }
 
 .social-link:hover::before {
