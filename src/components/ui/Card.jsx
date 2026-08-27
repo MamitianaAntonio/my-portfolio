@@ -15,8 +15,8 @@ export default function Card({
   return (
     <div
       className="group relative rounded-2xl overflow-hidden transition-all 
-        duration-500 hover:-translate-y-2 hover:scale-[1.02] backdrop-blur-sm 
-        bg-(--bg-primary) border border-(--border-color) hover:shadow-2xl"
+        duration-500 hover:-translate-y-2 backdrop-blur-sm 
+        bg-(--bg-primary) border border-(--border-color)"
     >
       {/* Image Section */}
       <div className="relative w-full h-50 overflow-hidden">
